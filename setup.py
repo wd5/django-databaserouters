@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='database-routers',
     version='0.0.1',
-    description="Collection of handy Django database routers for use with Django's multiple database API.",
+    description="Collection of Django database routers for use with Django's multiple database API.",
     long_description = open('README.rst', 'r').read(),
     author='Praekelt Foundation',
     author_email='dev@praekelt.com',
