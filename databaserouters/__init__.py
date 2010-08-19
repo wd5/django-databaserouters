@@ -16,15 +16,15 @@ class AppModelRouter(object):
         """
         Check that all things needed to run this router have been correctly configured.
         """
-        #If no APP_MODEL_DATABASE_ROUTING settings is specified an ImproperlyConfigured
-        #exception should be raised.
+        # If no APP_MODEL_DATABASE_ROUTING settings is specified an ImproperlyConfigured
+        # exception should be raised.
         try:
             settings.APP_MODEL_DATABASE_ROUTING
         except AttributeError:
             raise ImproperlyConfigured("AppModelRouter requires an APP_MODEL_DATABASE_ROUTING setting.")
         
-        #If an invalid APP_MODEL_DATABASE_ROUTING setting is specified an ImproperlConfigured
-        #exception should be raised.
+        # If an invalid APP_MODEL_DATABASE_ROUTING setting is specified an ImproperlConfigured
+        # exception should be raised.
         if settings.APP_MODEL_DATABASE_ROUTING.__class__ != dict:
             raise ImproperlyConfigured("AppModelRouter requires a dictionary for APP_MODEL_DATABASE_ROUTING setting.")
             
