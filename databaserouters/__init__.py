@@ -44,6 +44,7 @@ class AppModelRouter(object):
         dbs = self.resolve_dbs_for_router_by_model(router='db_for_write', model=model)
         if dbs:
             return dbs[0]
+
         return None
 
     def allow_syncdb(self, db, model):
@@ -67,5 +68,5 @@ class AppModelRouter(object):
         for key, values in router.items():
             if app_model_name in values:
                 dbs.append(key)
-
+        
         return dbs
